@@ -11,3 +11,9 @@ Basics:
 5.
 
 https://github.com/machadop1407/graphql-full-course
+
+queryDB:
+This is an proxy request made by lambda, we can have predefined query and requested by making API POST call
+POST
+http://localhost:3000/countries
+{"query":"countries"}
