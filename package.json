@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "apollo-server": "^3.9.0",
+    "apollo-server-lambda": "^3.9.0",
+    "graphql": "^16.5.0",
+    "serverless-offline": "^8.8.0"
+  }
+}

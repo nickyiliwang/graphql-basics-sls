@@ -1,0 +1,28 @@
+service: graphql-basics-sls
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  server:
+    handler: graphqlServer.graphqlHandler
+    events:
+    - http:
+        path: /
+        method: post
+        cors: true
+    - http:
+        path: /
+        method: get
+        cors: true
+  query:
+    handler: queryDB.handler
+    events:
+      - httpApi:
+          path: /countries
+          method: post
+
+plugins:
+  - serverless-offline
